@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.bg-darkslategray {
+    background-color: darkslategray !important;
+    color: white;
+    /* Optional: makes text readable */
+}
+
+.text-beige {
+    color: #fdf5e6;
+}
+
+.bg-linen {
+    background-color: #fdf5e6;
+}
+
+.text-darkslategray {
+    color: #2f4f4f;
+}
+
+.text-orange {
+    color: #e07b39;
+}
+
+
+.navbar,
+.card,
+footer {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Match Bootstrap's default toggler icon size and color */
+.navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    background-size: 100% 100%;
+    display: inline-block;
+    position: relative;
+}
+
+/* Custom Cross Icon when Navbar is Open */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    background-image: none;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before,
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* same thickness as burger lines */
+    background-color: rgba(0, 0, 0, 0.55);
+    /* match Bootstrap's default */
+    border-radius: 0.25rem;
+    /* same rounded corners */
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+#scrollTopBtn,
+#scrollBottomBtn {
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 45px;
+    height: 45px;
+}
+
+.marquee-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+.marquee-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.marquee {
+    display: inline-flex;
+    gap: 20px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    animation: scroll 20s linear infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.service-card {
+    display: inline-block;
+    margin: 5px 15px;
+    padding: 12px 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+}
+
+.services-cta a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.services-cta a:hover {
+    text-decoration: underline;
+}
+
+/* Button with Blue Gradient */
+
+.btn-grad {
+    background-image: linear-gradient(to right, #085078 0%, #85D8CE 51%, #085078 100%)
+}
+
+.btn-grad {
+    padding: 2px 25px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    /* display: block; */
+    text-decoration: none;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+}
+
+.bounce:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
+}
+
+.scroll-top-btn {
+    background-image: linear-gradient(to right, #085078 0%, #85D8CE 51%, #085078 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    font-size: 18px;
+    background-size: 200% auto;
+    transition: 0.4s ease;
+}
+
+.scroll-top-btn:hover {
+    background-position: right center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.scroll-bottom-btn {
+    background-image: linear-gradient(to right, #757F9A 0%, #D7DDE8 51%, #757F9A 100%);
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* Optional: round shape */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    font-size: 18px;
+    transition: 0.4s ease;
+}
+
+.scroll-bottom-btn:hover {
+    background-position: right center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
